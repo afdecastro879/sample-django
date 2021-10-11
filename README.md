@@ -19,6 +19,7 @@ You can use a virtualenv to sandbox to install the rquirements:
 
 ```
   python3 -m venv env
+  source env/bin/activate
   pip install -r requirements.txt
 ```
 
@@ -54,3 +55,26 @@ And start the server on http://localhost:8000
 ```
 python manage.py runserver
 ```
+
+## Tests
+
+To run tests
+
+```
+python manage.py test
+```
+
+To lint and check code
+
+```
+flake8 .
+black .
+isort .
+mypy .
+```
+
+## TODO
+
+- Create a Dockerfile to build and run the Django application
+- Setup a CI pipeline to test, lint the code and publish the coverage report
+- Deploy the application

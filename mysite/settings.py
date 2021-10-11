@@ -9,12 +9,11 @@ https://docs.djangoproject.com/en/2.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
-from pathlib import Path
 import os
 import sys
-import dj_database_url
-from urllib.parse import urlparse
+from pathlib import Path
 
+import dj_database_url
 from django.core.management.utils import get_random_secret_key
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -87,7 +86,7 @@ if os.getenv("DEVELOPMENT_MODE", "False") == "True":
             "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
         }
     }
-elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
+elif len(sys.argv) > 0 and sys.argv[1] != "collectstatic":
     if os.getenv("DATABASE_URL", None) is None:
         raise Exception("DATABASE_URL environment variable not defined")
     DATABASES = {
