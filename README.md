@@ -19,7 +19,7 @@ You can use a virtualenv to sandbox to install the rquirements:
 
 ```
   python3 -m venv env
-  pip install -r requirementstxt
+  pip install -r requirements.txt
 ```
 
 _Mac OS: Please note_
@@ -49,7 +49,7 @@ And collect static files
 python manage.py collectstatic
 ```
 
-And start the server on http://loclahost:8000
+And start the server on http://localhost:8000
 
 ```
 python manage.py runserver
